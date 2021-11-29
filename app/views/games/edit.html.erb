@@ -1,0 +1,34 @@
+<section class="hero is-black">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+      <% if @game.gamecode == 2 %>
+        クイズゲーム
+      <% elsif @game.gamecode == 3 %>
+        準備中
+      <% else %>
+        タイピングゲーム
+      <% end %>
+      </h1>
+    </div>
+  </div>
+</section>
+
+<% if @game.errors.any? %>
+  <div class="notification is-danger">
+    <h2><%= pluralize(@game.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
+    <ul>
+      <% @game.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<% if @game.gamecode == 2 %>
+  <%= render 'bodygame2' %>
+<% elsif @game.gamecode == 3 %>
+  <%= render 'bodygame3' %>
+<% else %>
+  <%= render 'bodygame' %>
+<% end %>

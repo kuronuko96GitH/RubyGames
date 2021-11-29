@@ -1,0 +1,52 @@
+<section class="section">
+
+  <article class="media">
+    <div class="media-content">
+
+      <div class="content has-text-centered">
+        <p>
+          <strong class="is-size-1" style="font-family: cursive;">your welcome!</strong>
+        </p>
+      </div>
+
+      <% if user_signed_in? %>
+
+      <% else %>
+
+        <br>
+        <div class="columns is-centered">
+          <div class="navbar-item">
+            <%= link_to "ゲームプレイ？", demo_path, class: "button is-primary" %>
+          </div>
+        </div>
+
+      <% end %>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="columns is-centered">
+        <ul>
+          <li><h1 class="title is-4">採用担当者様へ</h1></li>
+          <br>
+          <li><h1 class="title is-4">ログインをする場合は、</h1></li>
+          <li><h1 class="title is-4" style="color: blue;">Email：test1@example.com</h1></li>
+          <li><h1 class="title is-4" style="color: blue;">Password：test1234</h1></li>
+          <li><h1 class="title is-4">をお使い下さい。</h1></li>
+        </ul>
+      </div>
+
+    </div>
+  </article>
+
+  <br>
+  <div class="columns is-centered">
+    <div class="column">
+      <figure>
+        <div class="main-image"></div>
+      </figure>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,27 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.gamebox {
+    text-align: center; /* テキストの中央寄せ */
+    padding: 0.5em 1em;
+    margin: 2em 0;
+//    font-weight: bold;
+//    color: #6091d3; /*文字色*/
+    background: #000; /*背景色は、黒 */
+//    background: #FFF;
+    border: solid 3px #6091d3; /*枠線 青系*/
+    border-radius: 10px; /*角の丸み*/
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22); /*テキストボックスに影をつける*/
+}
+
+
+#game_targetLeft {
+    color: red; /*左側の文字色は、赤*/
+}
+
+
+#game_target {
+    color: #FFF; /*右側の文字色は、白*/
+}
+

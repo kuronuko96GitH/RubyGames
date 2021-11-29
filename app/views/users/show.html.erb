@@ -1,0 +1,148 @@
+<section class="hero is-black">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        マイページ
+      </h1>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <table class="table is-bordered">
+              <thead>
+                <tr class="is-size-4">
+                  <th>USER</th>
+                  <th>Email</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="is-size-4">
+                  <td>
+                    <strong><%= @user.username %></strong>
+                  </td>
+
+                  <% if @user.id == current_user.id %>
+                    <td>
+                      <strong><%= @user.email %></strong>
+                    </td>
+                    <td>
+                        <%= link_to "編集", edit_user_path(@user), class: "button is-primary" %>
+                    </td>
+                  <% end %>
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<% @@intCnt = 0 %>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-multiline">
+
+        <div class="column is-4">
+          <div class="card">
+
+          <% if @user.games.count == 0 %>
+            <div class="columns is-centered">
+              <div class="is-size-4"><%=link_to '『タイピングゲーム』',  new_game_path(gamecode: 1) %></div>
+            </div>
+
+          <% else %>
+
+            <% @@intCnt = 0 %>
+            <% @user.games.each do |game| %>
+
+              <% if game.gamecode == 1 %>
+                <div class="columns is-centered">
+                  <div class="is-size-4"><%=link_to '『タイピングゲーム』', edit_game_path(game) %></div>
+                </div>
+
+                <div class="columns is-centered">
+                  <div class="is-size-4">HIGH SCORE：<%= game.score %></div>
+                </div>
+
+              <% @@intCnt += 1 %>
+
+              <% end %>
+            <% end %>
+
+            <% if @@intCnt == 0 %>
+                <div class="columns is-centered">
+                  <div class="is-size-4"><%=link_to '『タイピングゲーム』',  new_game_path(gamecode: 1) %></div>
+                </div>
+            <% end %>
+
+          <% end %>
+
+            <div class="card-image">
+              <figure class="image is-3by2">
+                <%= image_tag 'game01.png' %>
+              </figure>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div class="column is-4">
+          <div class="card">
+
+          <% if @user.games.count == 0 %>
+            <div class="columns is-centered">
+              <div class="is-size-4"><%=link_to '『クイズゲーム』',  new_game_path(gamecode: 2) %></div>
+            </div>
+
+          <% else %>
+
+            <% @@intCnt = 0 %>
+            <% @user.games.each do |game| %>
+
+              <% if game.gamecode == 2 %>
+                <div class="columns is-centered">
+                  <div class="is-size-4"><%=link_to '『クイズゲーム』', edit_game_path(game) %></div>
+                </div>
+
+                <div class="columns is-centered">
+                  <div class="is-size-4">HIGH SCORE：<%= game.score %></div>
+                </div>
+
+              <% @@intCnt += 1 %>
+
+              <% end %>
+            <% end %>
+
+            <% if @@intCnt == 0 %>
+                <div class="columns is-centered">
+                  <div class="is-size-4"><%=link_to '『クイズゲーム』',  new_game_path(gamecode: 2) %></div>
+                </div>
+            <% end %>
+
+          <% end %>
+
+            <div class="card-image">
+              <figure class="image is-3by2">
+                <%= image_tag 'game02.png' %>
+              </figure>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>

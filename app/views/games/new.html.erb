@@ -1,0 +1,23 @@
+<section class="hero is-black">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+      <% if @game.gamecode == 2 %>
+        クイズゲーム
+      <% elsif @game.gamecode == 3 %>
+        準備中
+      <% else %>
+        タイピングゲーム
+      <% end %>
+      </h1>
+    </div>
+  </div>
+</section>
+
+<% if @game.gamecode == 2 %>
+  <%= render 'bodygame2' %>
+<% elsif @game.gamecode == 3 %>
+  <%= render 'bodygame3' %>
+<% else %>
+  <%= render 'bodygame' %>
+<% end %>

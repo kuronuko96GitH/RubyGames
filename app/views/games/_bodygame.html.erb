@@ -1,0 +1,95 @@
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-6">
+
+      <%= javascript_pack_tag 'jsgame/game01' %>
+        <div>
+        
+          <div class="gamebox">
+            <span id="game_targetLeft" class="title is-1"></span><span id="game_target" class="title is-1">click to start!</span>
+          </div>
+
+
+          <div class="card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+
+                  <% if user_signed_in? %>
+                    <%= form_for @game do |f| %>
+
+                      <% if @game.score == nil %>
+
+                        <div>
+                          <input type="button" class="button is-info" value="click to start" id="start_button">
+                          <%= f.submit 'スコア更新', id: "btnUpd", class: "button is-success" %>
+                        </div>
+
+                        <div class="title is-5">
+                            HIGH SCORE：<span id="game_lblhighscore">0</span> / SCORE：<span id="game_lblscore">0</span>
+                            <%= f.hidden_field :gamecode, class: "input" %>
+                            <%= f.hidden_field :score, class: "input", value: "0" %>
+<% 
+=begin
+# END までコメントアウト
+# デバッグ用に残します
+%>
+                            <%= f.text_field :gamecode, class: "input" %>
+                            <%= f.label :score, "スコア", class: "label" %>
+                            <%= f.text_field :score, class: "input", value: "0" %>
+<%
+=end
+%>
+                        </div>
+
+                      <% else %>
+                        <div>
+                          <input type="button" class="button is-info" value="click to start" id="start_button">
+                          <%= f.submit 'スコア更新', id: "btnUpd", class: "button is-success" %>
+                        </div>
+
+                        <div class="title is-5">
+                            HIGH SCORE：<span id="game_lblhighscore"><%= @game.score %></span> / SCORE：<span id="game_lblscore">0</span>
+                            <%= f.hidden_field :gamecode, class: "input" %>
+                            <%= f.hidden_field :score, class: "input" %>
+                        </div>
+
+                      <% end %>
+                    <% end %>
+
+                  <% else %>
+
+                      <div>
+                        <input type="button" class="button is-info" value="click to start" id="start_button">
+                        <input type="button" value="ランキング表へ" id="btnUpd" class="button is-success" onclick="location.href='/games'">
+                        <p class="title is-5">※ログインしない場合、ランキング情報は保存されません。</p>
+                      </div>
+
+                      <div class="field">
+                          <input class="input" type="hidden" id="game_lblhighscore" value="0">
+                          <input class="input" type="hidden" id="game_lblscore" value="0">
+                          <input class="input" type="hidden" id="game_gamecode" value="1">
+                          <input class="input" type="hidden" id="game_score" value="0">
+                      </div>
+                  <% end %>
+
+                  <div class="title is-5">
+                    成功数：<span id="game_success">0</span> / Miss: <span id="game_miss">0</span>
+                  </div>
+                  <div class="title is-5">
+                     <span id="game_timer">制限時間：20秒</span>
+                  </div>
+                  <div>
+                    <progress id="game_progress" class="progress is-primary" value="0" max="2000"></progress>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

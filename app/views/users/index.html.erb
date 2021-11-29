@@ -1,0 +1,38 @@
+<section class="hero is-success">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        ユーザー一覧
+      </h1>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      <% @users.each do |user| %>
+        <div class="column is-2">
+          <div class="card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+
+      <% if user_signed_in? %>
+                  <div class="username"><%=link_to user.username, user_path(user) %></div>
+      <% else %>
+                  <div class="title"><%= user.username %></div>
+      <% end %>
+
+                </div>
+              </div>
+              <div class="content">
+                ゲーム登録件数：<%=user.games.count %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
