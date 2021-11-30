@@ -5,9 +5,32 @@
         ランキング表
       </h1>
       <p class="control">
+
+      <% if params["frmgamecode"] == nil %>
         <%= link_to "ゲームタイピング", games_path('frmgamecode': 1), class: "button is-success" %>
         <%= link_to "クイズゲーム", games_path('frmgamecode': 2), class: "button is-success" %>
         <%= link_to "準備中", games_path('frmgamecode': 3), class: "button is-success" %>
+
+      <% else %>
+        <% if params["frmgamecode"] == '1' %>
+          <%= link_to "ゲームタイピング", games_path('frmgamecode': 1), class: "button is-info" %>
+        <% else %>
+          <%= link_to "ゲームタイピング", games_path('frmgamecode': 1), class: "button is-success" %>
+        <% end %>
+
+        <% if params["frmgamecode"] == '2' %>
+          <%= link_to "クイズゲーム", games_path('frmgamecode': 2), class: "button is-info" %>
+        <% else %>
+          <%= link_to "クイズゲーム", games_path('frmgamecode': 2), class: "button is-success" %>
+        <% end %>
+
+        <% if params["frmgamecode"] == '3' %>
+          <%= link_to "準備中", games_path('frmgamecode': 3), class: "button is-info" %>
+        <% else %>
+          <%= link_to "準備中", games_path('frmgamecode': 3), class: "button is-success" %>
+        <% end %>
+      <% end %>
+  
       </p>
     </div>
   </div>

@@ -76,13 +76,91 @@ const quiz = [
     answers: ['dogg','dogy','dog','dogyy'],
     correct: 'dog'
   }, {
+    question: '人形',
+    answers: ['dolly','dall','doll','doly'],
+    correct: 'doll'
+  }, {
+    question: '簡単',
+    answers: ['eesy','easy','easi','eassy'],
+    correct: 'easy'
+  }, {
+    question: '食べる',
+    answers: ['eat','eato','eet','aat'],
+    correct: 'eat'
+  }, {
+    question: '卵',
+    answers: ['eggo','eg','egu','egg'],
+    correct: 'egg'
+  }, {
+    question: 'エルフ',
+    answers: ['elff','alf','elf','elfe'],
+    correct: 'elf'
+  }, {
+    question: 'エネルギー',
+    answers: ['enelgy','emergy','energy','anergy'],
+    correct: 'energy'
+  }, {
+    question: '家族',
+    answers: ['family','famuly','fomily','familly'],
+    correct: 'family'
+  }, {
+    question: '父親',
+    answers: ['fother','father','fater','fathar'],
+    correct: 'father'
+  }, {
+    question: '魚',
+    answers: ['fissh','fish','fishu','fash'],
+    correct: 'fish'
+  }, {
+    question: '花',
+    answers: ['flawer','flowar','flower','flowor'],
+    correct: 'flower'
+  }, {
+    question: '友人',
+    answers: ['frend','friendo','friende','friend'],
+    correct: 'friend'
+  }, {
+    question: 'ゲーム',
+    answers: ['game','gam','geme','gamu'],
+    correct: 'game'
+  }, {
+    question: '庭',
+    answers: ['gorden','gardden','gaden','garden'],
+    correct: 'garden'
+  }, {
+    question: '門',
+    answers: ['gote','gete','gate','gute'],
+    correct: 'gate'
+  }, {
+    question: '少女',
+    answers: ['garl','gerl','girl','girle'],
+    correct: 'girl'
+  }, {
+    question: 'ゴール',
+    answers: ['goal','gool','gole','goll'],
+    correct: 'goal'
+  }, {
+    question: '手',
+    answers: ['hando','hand','haund','hannd'],
+    correct: 'hand'
+  }, {
+    question: '宿題',
+    answers: ['homework','homewoak','homwork','homewoak'],
+    correct: 'homework'
+  }, {
+    question: '病院',
+    answers: ['hospitale','hospital','hospitel','hospitol'],
+    correct: 'hospital'
+  }, {
+    question: '家',
+    answers: ['house','hause','hausu','hous'],
+    correct: 'house'
+  }, {
     question: 'ミカン',
     answers: ['oranga','orango','orange','orangi'],
     correct: 'orange'
   }
 ];
-
-
 
 
   let score = 0;
@@ -163,7 +241,7 @@ const quiz = [
 const func_init = () => {
   // 初期化処理
 
-  if (quizNo === 0) {
+  if (isPlaying === false) {
     // 初期画面の設定
     // 問題を設定
     $lblTarget.textContent = "click to start!";
@@ -251,13 +329,8 @@ const func_goToNext = () => {
   quizNo = Math.floor(Math.random() * quiz.length);
 //  quizNo++;
 
-  if(quizNo < quizLen){
-    // 次の問題と回答ボタンを再設定する。
-    func_init();
-  } else {
-    // $window.alert('クイズ終了！');
-    func_showResult();
-  }
+  // 次の問題と回答ボタンを再設定する。
+  func_init();
 };
 
 
