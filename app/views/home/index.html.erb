@@ -15,10 +15,8 @@
 
         <br>
         <div class="columns is-centered">
-          <div class="navbar-item">
             <%= link_to "ゲームプレイ？", demo_path, class: "button is-primary" %>
-          </div>
-        </div>
+        </div>
 
       <% end %>
 
@@ -36,6 +34,13 @@
           <li><h1 class="title is-4">をお使い下さい。</h1></li>
         </ul>
       </div>
+
+      <br>
+      <div class="content has-text-centered">
+        <div class="columns is-centered">
+          <%= link_to "ログイン", new_user_session_path, class: "button is-success" %>
+        </div>
+　　  </div>
 
     </div>
   </article>
