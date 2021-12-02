@@ -2,6 +2,11 @@
 * プロジェクト：RubyGames
 * 製作期間：１カ月
 
+# 本番環境（Heroku）
+* 公開URL：https://kuronuko9646rubygames.herokuapp.com
+
+　※実際に動作するゲームが遊べます。
+
 # システムエンジニア経歴
 ◆全てWindowsでの開発です。
 * Delphi　1年～3年
