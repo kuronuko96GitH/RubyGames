@@ -1,40 +1,65 @@
-# �|�[�g�t�H���I�iportfolio�j
-# �v���W�F�N�g�FRubyGames
+# ポートフォリオ（portfolio）
+* プロジェクト：RubyGames
+* 製作期間：１カ月
 
-���v���W�F�N�g�̃e�[�}
-�@Web��ŕ����̃Q�[����V�Ԃ��Ƃ��ł���B
-�A�P�P����ɊJ���v���W�F�N�g�֎Q������
-  �V�l�v���O���}�[�ł��A�J�����ł���z��Ő݌v������B
+# システムエンジニア経歴
+◆全てWindowsでの開発です。
+* Delphi　1年～3年
+* VisualBasic　5年以上
+* VBA　1年～3年
+* Visual Basic .NET　1年～3年
+* Java　5年以上
+* JavaScript　3年～5年
+* JSP　3年～5年
+* XML　3年～5年
 
+◆DB・SQL
+* Oracle　5年以上
+* SQLServer　1年～3年
+* Access　1年～3年
 
-���J����
-��������ԁF�P�J��
-���J������E��
-  ruby (3.0.2)
-  rails (6.1.4)
-  JavaScript
-  sqlite3 (���[�J�����f�[�^�x�[�X)
-  PostgreSQL (�{�Ԋ��f�[�^�x�[�X)
-  GitHub (�\�[�X�R�[�h�Ǘ�)
-  SourceTree (�\�[�X�R�[�h�Ǘ�)
-���C���X�g�[������gem
-  bulma-rails (0.9.2)
-  devise (4.8.0)
+# プロジェクトのテーマ
+①Web上で複数のゲームを遊ぶことができる。
 
+②１ケ月後に開発プロジェクトへ参加する
 
-���J���Ҍ���
-���g�p���Ă�c�a�e�[�u��
-�EUSERS�i���[�U�[���j
-�EGAMES�i�X�R�A���j
+  新人プログラマーでも、開発ができる想定で設計をする。
 
-�@�V�K�o�^�����Ȃ��ƁA
-�@�����L���O�\�ɂ͔��f����܂���B
+（※『準備中』ボタンが新人の担当を想定してます）
 
-�A�V�K�o�^�����^�C�~���O�ŁA
-�@USERS�i�e�[�u���j�Ƀf�[�^���쐬���܂��B
+# 開発環境
+◆開発言語・環境
+* ruby (3.0.2)
+* rails (6.1.4)
+* JavaScript
+* sqlite3 (ローカル環境データベース)
+* PostgreSQL (本番環境データベース)
+* GitHub (ソースコード管理)
+* SourceTree (ソースコード管理)
 
-�B�X�R�A�X�V�������^�C�~���O��
-�@GAMES�i�e�[�u���j�Ƀf�[�^���쐬���܂��B
+◆インストールしたgem
+* bulma-rails (0.9.2)
+* devise (4.8.0)
 
-�CGAMES�i�e�[�u���j�́wgamecode�x��
-�@�e�Q�[���̃X�R�A���̃t���O�Ǘ������Ă܂��B
+# 開発者向け
+◆使用してるＤＢテーブル
+* USERS（ユーザー情報）
+* GAMES（スコア情報）
+
+◆ＤＢテーブルの更新タイミング
+
+①新規登録をしないと、
+
+　ランキング表には反映されません。
+
+②新規登録をしたタイミングで、
+
+　USERS（テーブル）にデータを作成します。
+
+③スコア更新をしたタイミングで
+
+　GAMES（テーブル）にデータを作成します。
+
+④GAMES（テーブル）の『gamecode』で
+
+　各ゲームのスコア情報のフラグ管理をしてます。
