@@ -8,10 +8,11 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
 
-  def index
-  # ユーザーの一覧画面
-    @users = User.all # 一覧画面で、全てのユーザー情報を取得する
-  end
+#　今回のプロジェクトでは不要。
+#  def index
+#  # ユーザーの一覧画面
+#    @users = User.all # 一覧画面で、全てのユーザー情報を取得する
+#  end
 
   def show
   # ユーザーの詳細画面
