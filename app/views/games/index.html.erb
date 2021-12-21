@@ -9,7 +9,6 @@
       <% if params["frmgamecode"] == nil %>
         <%= link_to "ゲームタイピング", games_path('frmgamecode': 1), class: "button is-info" %>
         <%= link_to "クイズゲーム", games_path('frmgamecode': 2), class: "button is-success" %>
-        <%= link_to "準備中", games_path('frmgamecode': 3), class: "button is-success" %>
 
       <% else %>
         <% if params["frmgamecode"] == '1' %>
