@@ -15,7 +15,7 @@
     <%= favicon_link_tag '/favicon.ico' %>
   </head>
 
-  <body>
+  <body class="body_style">
 
 <% 
 =begin
@@ -92,5 +92,16 @@
     </nav>
     
     <%= yield %>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+      <% 
+        # フッダーに表示するコメントがある場合、ここに記入。
+       %>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>

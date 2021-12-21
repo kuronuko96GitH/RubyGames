@@ -17,6 +17,13 @@
 /* 2021.11.20 add */
 @import "bulma";
 
+.body_style {
+	background-image: url("45degreee_fabric.png"); // 商用可のフリー素材を背景色として使用。
+//	background: #FFFFFF;  // 現状は、全体の背景色を白で指定する。
+//	background: #F5F5F5; // お試しで全体の背景色をWhiteSmokeにしてみる。
+//	background: #FBFBFB; // お試しで全体の背景色を、かなり明るめのライトグレーにしてみる。
+}
+
 /* フラッシュメッセージ（ユーザー登録成功など）とヘッダの間にできる余白を消す */
 .notification:not(:last-child){
 	margin-bottom: 0;
