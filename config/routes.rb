@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 #  get 'users/new'
 #  get 'users/edit'
 
+get  '/aboutme',    to: 'users#aboutme' #About me
+
 
 
   resources :games  # （index,show,new,edit）
