@@ -24,11 +24,6 @@
           <%= link_to "クイズゲーム", games_path('frmgamecode': 2), class: "button is-success" %>
         <% end %>
 
-        <% if params["frmgamecode"] == '3' %>
-          <%= link_to "準備中", games_path('frmgamecode': 3), class: "button is-info" %>
-        <% else %>
-          <%= link_to "準備中", games_path('frmgamecode': 3), class: "button is-success" %>
-        <% end %>
       <% end %>
   
       </p>
@@ -84,6 +79,5 @@
         </div>
 
     <% end %>
-
   </div>
 </section>
