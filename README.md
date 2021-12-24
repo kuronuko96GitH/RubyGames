@@ -28,12 +28,13 @@
 # 開発環境
 ◆開発言語・環境
 * ruby (3.0.2)
-* rails (6.1.4)
+* rails (6.1.4、フレームワーク)
 * JavaScript
 * sqlite3 (ローカル環境データベース)
 * PostgreSQL (本番環境データベース)
 * GitHub (ソースコード管理)
 * SourceTree (ソースコード管理)
+* Visual Studio Code (ソースコードエディタ)
 
 ◆インストールしたgem
 * bulma-rails (0.9.2)
