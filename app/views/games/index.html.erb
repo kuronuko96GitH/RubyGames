@@ -61,7 +61,7 @@
                       <div class="title is-5">SCORE：<%= game.score %></div>
                     </div>
                     <div class="content">
-                      <div class="title is-5">最終更新日：<time><%= game.updated_at.strftime("%Y-%m-%d") %></time></div>
+                      <div class="title is-5">最終更新日：<time><%= game.updated_at.in_time_zone("Tokyo").strftime("%Y-%m-%d") %></time></div>
                     </div>
 
         
