@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   #　 [:index]を指定すると…(index)一覧画面のみは、
   #ユーザー情報を取得できないゲストユーザーの閲覧は可能とする。
   #　それ以外のゲームスコア情報の新規登録、詳細画面、編集画面　はアクセス不可とする。
-  before_action :authenticate_user!, except: [:index, :aboutme]
+  before_action :authenticate_user!, except: [:index, :aboutme, :link]
 
   def aboutme
     # About me用のルートアクション

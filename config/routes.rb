@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 #  get 'users/edit'
 
 get  '/aboutme',    to: 'users#aboutme' #About me
+get  '/link',    to: 'users#link' #Link
 
 
 
