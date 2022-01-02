@@ -54,7 +54,6 @@ class UsersController < ApplicationController
   # セキュリティ対策…外部からデータベースにアクセスできないように
   def user_params
     params.require(:user).permit(:username, :email)
-#   params.require(:user).permit(:username, :email, :password)
   end
 
 end

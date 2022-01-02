@@ -34,7 +34,9 @@
                       <strong><%= @user.email %></strong>
                     </td>
                     <td>
+                      <% if @user.username != 'guest' %>
                         <%= link_to "編集", edit_user_path(@user), class: "button is-primary" %>
+                      <% end %>
                     </td>
                   <% end %>
 
